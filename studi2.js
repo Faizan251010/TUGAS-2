@@ -1,7 +1,7 @@
 function seleksiMahasiswa(daftarMahasiswa) {
     for (let i = 0; i < daftarMahasiswa.length; i++) {
         let mahasiswa = daftarMahasiswa[i];
-        let hasilSeleksi = "";
+        let hasilSeleksi = '';
 
         if (mahasiswa.ipk >= 3.5 && mahasiswa.pendapatanOrtu <= 5000000) {
             mahasiswa.hasilSeleksi = "Lulus";
