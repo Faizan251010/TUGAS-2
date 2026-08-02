@@ -1,11 +1,11 @@
-function hitungGajiMingguan(jamKerja) {
+function hitungGajiMingguan(daftarJamKerja) {
     const gajiDasar = 50000;
     const gajiLembur = 75000;
     let totalJamKerja = 0;
     let totalGaji = 0;
 
-    for (let i = 0; i < jamKerja.length; i++) {
-        totalJamKerja += jamKerja[i];
+    for (let i = 0; i < daftarJamKerja.length; i++) {
+        totalJamKerja += daftarJamKerja[i];
     }
 
     if (totalJamKerja > 40) {
@@ -17,5 +17,5 @@ function hitungGajiMingguan(jamKerja) {
     return totalGaji;
 }
 
-const jamKerja = [10 ,9 ,8 ,10 ,8]
-console.log(`Total gaji mingguan: Rp ${hitungGajiMingguan(jamKerja)}`);
+const daftarJamKerja = [10 ,9 ,8 ,10 ,8]
+console.log(`Total gaji mingguan: Rp ${hitungGajiMingguan(daftarJamKerja)}`);

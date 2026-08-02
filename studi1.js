@@ -1,6 +1,6 @@
 function hitungTotalBuku(daftarHarga) {
     let totalHarga = 0;
-    let status = "";
+    let status = '';
     for (let i = 0; i < daftarHarga.length; i++)
         totalHarga += daftarHarga[i];
 
