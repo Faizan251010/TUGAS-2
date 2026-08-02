@@ -1,19 +1,22 @@
 function seleksiMahasiswa(daftarMahasiswa) {
+    let seleksi = [];
     for (let i = 0; i < daftarMahasiswa.length; i++) {
         let mahasiswa = daftarMahasiswa[i];
         let hasilSeleksi = '';
 
         if (mahasiswa.ipk >= 3.5 && mahasiswa.pendapatanOrtu <= 5000000) {
-            mahasiswa.hasilSeleksi = "Lulus";
+            mahasiswa.hasilSeleksi = 'Lulus';
         } else {
-            mahasiswa.hasilSeleksi = "Tidak lulus";
-        } console.log(`Nama: ${mahasiswa.nama}
-IPK: ${mahasiswa.ipk}
-Pendapatan Orang Tua: ${mahasiswa.pendapatanOrtu}
-Status Kelulusan: ${mahasiswa.hasilSeleksi}
-`);
-    }
+            mahasiswa.hasilSeleksi = 'Tidak lulus';
+        } seleksi.push({
+            nama: mahasiswa.nama,
+            ipk: mahasiswa.ipk,
+            pendapatanOrtu: mahasiswa.pendapatanOrtu,
+            hasil: mahasiswa.hasilSeleksi
+        });
+    } return seleksi;
 }
+
 const daftarMahasiswa = [
     {
         nama: 'Dede',
@@ -42,4 +45,5 @@ const daftarMahasiswa = [
     },
 ]
 
-seleksiMahasiswa(daftarMahasiswa);
+const dataSeleksi = seleksiMahasiswa(daftarMahasiswa);
+console.log (dataSeleksi);

@@ -7,13 +7,18 @@ function hitungTotalBuku(daftarHarga) {
  if (totalHarga > 150000) {
     let diskon = totalHarga * 0.15;
     totalHarga -= diskon;
-    console.log (`Total bayar: ${totalHarga}
-Status : Mendapat diskon 15%`);
+    status = 'Mendapat diskon 15%';
 } else {
-    console.log (`Total bayar: ${totalHarga}
-Status : Tidak mendapat diskon`);
+    status = 'Tidak mendapat diskon';
+}
+return {
+    totalAkhir: totalHarga,
+    statusDiskon: status
 }
 }
 
 const daftarHarga = [70000, 60000, 35000];
-hitungTotalBuku(daftarHarga);
+const hasilBelanja = hitungTotalBuku(daftarHarga);
+
+console.log (`Total bayar: ${hasilBelanja.totalAkhir}
+Status: ${hasilBelanja.statusDiskon}`);

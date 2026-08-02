@@ -1,12 +1,13 @@
 function cekRestockGudang(daftarBarang, threshold) {
+    let barangWajibRestock = [];
     for (let i = 0; i< daftarBarang.length; i++) {
         let barang = daftarBarang[i];
-        let status = '';
         if (barang.stok < threshold && barang.aktif == true) {
-            console.log (`Barang yang wajib restock: ${barang.nama}`);
+            barangWajibRestock.push(barang.nama);
         }
-    }
-}
+    } return barangWajibRestock
+    };
+
 const threshold = 10;
 const daftarBarang = [
     {
@@ -56,4 +57,6 @@ const daftarBarang = [
     }
 ];
 
-cekRestockGudang(daftarBarang, threshold);
+const hasilCek = cekRestockGudang(daftarBarang, threshold);
+
+console.log (`Barang yang harus Restock: ${hasilCek}`);

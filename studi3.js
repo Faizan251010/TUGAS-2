@@ -1,4 +1,5 @@
 function filterParkirGanjilGenap(mobil) {
+    let hasilFilter = [];
     for (let i = 0; i < mobil.length; i++) {
         let dataMobil = mobil[i];
         let angka = dataMobil.plat;
@@ -8,7 +9,7 @@ function filterParkirGanjilGenap(mobil) {
         let platGanjil = angkaTerakhir % 2 !== 0;
         let tglGanjil = dataMobil.tglMasuk % 2 !== 0;
         let status = '';
-        
+
      if (platGenap && tglGenap) {
         status = 'Diizinkan';
     } else if (platGanjil && tglGanjil) {
@@ -16,13 +17,13 @@ function filterParkirGanjilGenap(mobil) {
     } else {
         status = 'Tidak Diizinkan';
     }
-    
-    console.log (`Nama Mobil: ${dataMobil.nama}
-Plat Mobil: ${dataMobil.plat}
-Tanggal Masuk: ${dataMobil.tglMasuk}
-Status: ${status}
-`);
-}
+    hasilFilter.push({
+        nama: dataMobil.nama,
+            plat: dataMobil.plat,
+            tglMasuk: dataMobil.tglMasuk,
+            status: status
+    });
+} return hasilFilter;
 }
 
 const mobil = [
@@ -53,4 +54,5 @@ const mobil = [
 },
 ]
 
-filterParkirGanjilGenap(mobil);
+const dataParkir = filterParkirGanjilGenap(mobil);
+console.log (dataParkir);
