@@ -8,6 +8,7 @@ function filterParkirGanjilGenap(mobil) {
         let platGanjil = angkaTerakhir % 2 !== 0;
         let tglGanjil = dataMobil.tglMasuk % 2 !== 0;
         let status = '';
+        
      if (platGenap && tglGenap) {
         status = 'Diizinkan';
     } else if (platGanjil && tglGanjil) {

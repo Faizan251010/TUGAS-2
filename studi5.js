@@ -20,7 +20,7 @@ const daftarBarang = [
         aktif: true
     },
     {
-        nama: 'Sensor Jarak Ultrasonic HC-SR04',
+        nama: 'Sensor Ultrasonic HC-SR04',
         stok: 8,
         aktif: true
     },
@@ -50,7 +50,7 @@ const daftarBarang = [
         aktif: true
     },
     {
-        nama: 'Sensor Gas MQ-2 Smoke Detector',
+        nama: 'Sensor MQ-2 Smoke Detector',
         stok: 6,
         aktif: false
     }
