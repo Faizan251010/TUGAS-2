@@ -14,5 +14,5 @@ function evaluasiAsupanKalori(kalori) {
     console.log (`Asupan kalori ${totalKalori} kalori ${target}`)
 }
 
-const kalori = [220, 480, 350, 400, 950, 800]
+const kalori = [220, 480, 350, 400, 950, 600]
 evaluasiAsupanKalori(kalori);
