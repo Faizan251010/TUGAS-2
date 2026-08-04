@@ -2,8 +2,7 @@ function filterParkirGanjilGenap(daftarMobil) {
     let hasilFilter = [];
     for (let i = 0; i < daftarMobil.length; i++) {
         let dataMobil = daftarMobil[i];
-        let angka = dataMobil.plat;
-        let angkaTerakhir = parseInt(angka.slice(-1));
+        let angkaTerakhir = dataMobil.plat % 10;
         let platGenap = angkaTerakhir % 2 === 0;
         let tglGenap = dataMobil.tglMasuk % 2 === 0;
         let platGanjil = angkaTerakhir % 2 !== 0;
@@ -29,27 +28,27 @@ function filterParkirGanjilGenap(daftarMobil) {
 const daftarMobil = [
 {
     nama: 'Toyota Avanza',
-    plat: '2637',
+    plat: 2637,
     tglMasuk: 27
 },
 {
     nama: 'Daihatsu Ayla',
-    plat: '4578',
+    plat: 4578,
     tglMasuk: 25
 },
 {
     nama: 'Suzuki Ertiga',
-    plat: '3579',
+    plat: 3579,
     tglMasuk: 16
 },
 {
     nama: 'Toyota Fortuner',
-    plat: '3473',
+    plat: 3473,
     tglMasuk: 21
 },
 {
     nama: 'Honda Civic',
-    plat: '4784',
+    plat: 4784,
     tglMasuk: 18
 },
 ]

@@ -1,6 +1,6 @@
 function hitungGajiMingguan(daftarJamKerja) {
-    const gajiDasar = 50000;
-    const gajiLembur = 75000;
+    const gajiDasar = 160000;
+    const gajiLembur = 270000;
     let totalJamKerja = 0;
     let totalGaji = 0;
 
